@@ -23,3 +23,13 @@ void AppManager::startApp(QString appname)
     QProcess::startDetached(appname);
     qApp->quit();
 }
+
+void AppManager::powerOff()
+{
+    QString program = "/usr/bin/gpio_test";
+    QStringList arg;
+    arg << "-s"<<"output"<<"-iGPIOF03"<<"-v"<<"0";
+    QProcess myProcess;
+    myProcess.start(program, arg, QIODevice::ReadWrite);
+    myProcess.waitForFinished();
+}

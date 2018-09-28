@@ -55,6 +55,10 @@ Window {
                 else if(event.key === Utils.KEY_5){  //5 TOFD
 
                 }
+                else if(event.key === Utils.KEY_POWER){ // power key
+
+                    appManager.powerOff()
+                }
             }
 
             Button {

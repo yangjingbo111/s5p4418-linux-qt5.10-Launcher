@@ -11,7 +11,7 @@ public:
     ~AppManager();
 
     Q_INVOKABLE void startApp(QString appname);
-
+    Q_INVOKABLE void powerOff();
 signals:
 
 public slots:
